@@ -8,14 +8,12 @@
  */
 
 public class WAVLTree {
-	
-	private WAVLNode root;
-	
+
 	/**
 	 * Constructor; creates a tree with empty Node
 	 */
 	public WAVLTree(int key , String info) {
-		this.root = new WAVLNode(key , info);
+		WAVLNode root = new WAVLNode(key , info);
 	}
 
 	/**
