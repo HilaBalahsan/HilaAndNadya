@@ -12,8 +12,8 @@ public class WAVLTree {
 	/**
 	 * Constructor; creates a tree with empty Node
 	 */
-	public WAVLTree(){
-		WAVLNode root = new WAVLNode();
+	public WAVLTree(int key , String info) {
+		WAVLNode root = new WAVLNode(key , info);
 	}
 
 	/**
@@ -79,8 +79,7 @@ public class WAVLTree {
 	 * Returns the info of the item with the largest key in the tree,
 	 * or null if the tree is empty
 	 */
-	public String max()
-	{
+	public String max() {
 		return "42"; // to be replaced by student code
 	}
 
@@ -103,8 +102,7 @@ public class WAVLTree {
 	 * sorted by their respective keys,
 	 * or an empty array if the tree is empty.
 	 */
-	public String[] infoToArray()
-	{
+	public String[] infoToArray()  {
 		String[] arr = new String[42]; // to be replaced by student code
 		return arr;                    // to be replaced by student code
 	}
@@ -117,8 +115,7 @@ public class WAVLTree {
 	 * precondition: none
 	 * postcondition: none
 	 */
-	public int size()
-	{
+	public int size()  {
 		return 42; // to be replaced by student code
 	}
 
@@ -130,7 +127,7 @@ public class WAVLTree {
 	 * another file.
 	 * This is an example which can be deleted if no such classes are necessary.
 	 */
-	public class WAVLNode{
+	public class WAVLNode {
 
 		/**
 		 * Node data
@@ -156,17 +153,18 @@ public class WAVLTree {
 		 * Height of node
 		 */
 		private int height;
-		
+
 		public WAVLNode(int key,String info){
 			this.key=key;
 			this.info=info;
 			this.left=null;
 			this.right=null;
 			this.height=0;
-			
+
+		}
 	}
 }
 
-}
+
 
 
