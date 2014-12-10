@@ -1,3 +1,5 @@
+import AvlTree.AvlNode;
+
 
 /**
  * WAVLTree
@@ -24,7 +26,7 @@ public class WAVLTree {
 	 *
 	 */
 	public boolean empty() {
-		return false; // to be replaced by student code
+		return (this.root==null);
 	}
 
 	/**
@@ -110,8 +112,18 @@ public class WAVLTree {
 	 */
 	public String min()
 	{
-		return "42"; // to be replaced by student code
+		if (this.root.left==null){
+			return (this.root.left.info);}
+		else{
+			return min(this.root.left).info;}
 	}
+	public WAVLNode min(WAVLNode node)
+	    {
+	        if( node == null ){
+	            return node;}
+	        else{
+	        	return min(node.left);}
+	    }
 
 	/**
 	 * public String max()
@@ -120,8 +132,18 @@ public class WAVLTree {
 	 * or null if the tree is empty
 	 */
 	public String max() {
-		return "42"; // to be replaced by student code
+		if (this.root.right==null){
+			return (this.root.right.info);}
+		else{
+			return max(this.root.right).info;}
 	}
+	public WAVLNode max(WAVLNode node)
+	    {
+	        if( node == null ){
+	            return node;}
+	        else{
+	        	return max(node.left);}
+	    }
 
 	/**
 	 * public int[] keysToArray()
@@ -131,6 +153,7 @@ public class WAVLTree {
 	 */
 	public int[] keysToArray()
 	{
+		
 		int[] arr = new int[42]; // to be replaced by student code
 		return arr;              // to be replaced by student code
 	}
