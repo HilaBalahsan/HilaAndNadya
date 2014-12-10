@@ -28,14 +28,53 @@ public class WAVLTree {
 	}
 
 	/**
+	 *  public String search(WAVLTree T , int k) 
+	 *  
+	 *  recursive search
+	 */
+
+	public String search(WAVLNode node , int k)
+	{
+		if(node.key == k)
+		{
+			return node.info; 
+		}
+		else if(node.key < k) && (node.right != null)
+		{
+			return search(node.right, k);
+		}
+		else if(node.left != null)
+		{
+			return search(node.left , k);
+		}
+
+		return null;
+	}
+
+	/**
 	 * public String search(int k)
 	 *
 	 * returns the info of an item with key k if it exists in the tree
 	 * otherwise, returns null
 	 */
-	public String search(int k)
-	{
-		return "42";  // to be replaced by student code
+	public String search(int k)	{
+
+		if (this.root != null)
+		{
+			if(this.root.key == k)
+			{
+				return this.root.info;
+			}
+			else if((this.root.key < k) && (this.root.right != null)) 
+			{
+				return search(this.root.right , k); 
+			}
+			else if((this.root.key > k) && (this.root.left != null)) 
+			{
+				return search(this.root.left , k); 
+			}
+		}
+		return null;  // to be replaced by student code
 	}
 
 	/**
@@ -156,11 +195,11 @@ public class WAVLTree {
 		private int height;
 
 		public WAVLNode(int key,String info){
-			this.key=key;
-			this.info=info;
-			this.left=null;
-			this.right=null;
-			this.height=0;
+			this.key = key;
+			this.info = info;
+			this.left = null;
+			this.right = null;
+			this.height = 0;
 
 		}
 	}
