@@ -1,4 +1,3 @@
-import AvlTree.AvlNode;
 
 
 /**
@@ -41,7 +40,7 @@ public class WAVLTree {
 		{
 			return node.info; 
 		}
-		else if(node.key < k) && (node.right != null)
+		else if((node.key < k) && (node.right != null))
 		{
 			return search(node.right, k);
 		}
@@ -112,18 +111,25 @@ public class WAVLTree {
 	 */
 	public String min()
 	{
-		if (this.root.left==null){
-			return (this.root.left.info);}
-		else{
-			return min(this.root.left).info;}
+		if (this.root.left == null)
+		{
+			return (this.root.info);
+		}
+		else
+		{
+		return min(this.root.left).info;}
 	}
 	public WAVLNode min(WAVLNode node)
+	{
+	    if( node.left == null )
 	    {
-	        if( node == null ){
-	            return node;}
-	        else{
-	        	return min(node.left);}
+	    	return node;
 	    }
+	    else
+	    {
+	        return min(node.left);
+	    }
+	 }
 
 	/**
 	 * public String max()
@@ -131,18 +137,26 @@ public class WAVLTree {
 	 * Returns the info of the item with the largest key in the tree,
 	 * or null if the tree is empty
 	 */
-	public String max() {
-		if (this.root.right==null){
-			return (this.root.right.info);}
-		else{
-			return max(this.root.right).info;}
+	public String max() 
+	{
+		if (this.root.right == null)
+		{
+			return (this.root.info);
+		}
+		else
+		{
+			return max(this.root.right).info;
+		}
 	}
 	public WAVLNode max(WAVLNode node)
+	{
+	    if( node.right == null )
 	    {
-	        if( node == null ){
-	            return node;}
-	        else{
-	        	return max(node.left);}
+	    	return node;
+	    }
+	        else
+	    {
+	        return max(node.left);}
 	    }
 
 	/**
