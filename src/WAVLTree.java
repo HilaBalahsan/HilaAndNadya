@@ -1,5 +1,5 @@
 /**
- *
+ *Hello   kjkjl
  * WAVLTree
  *
  * An implementation of a WAVL Tree with
@@ -8,6 +8,7 @@
  */
 
 public class WAVLTree {
+	System.out.println("ffff");
 
   /**
    * public boolean empty()
