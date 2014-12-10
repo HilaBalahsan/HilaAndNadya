@@ -1,4 +1,3 @@
-import AvlTree.AvlNode;
 
 /**
  * WAVLTree
@@ -15,11 +14,6 @@ public class WAVLTree {
 	 */
 	public WAVLTree(){
 		WAVLNode root = new WAVLNode();
-		root.height = 0;
-		root.info = null;
-		root.key = null;
-		root.left = null;
-		root.right = null;
 	}
 
 	/**
