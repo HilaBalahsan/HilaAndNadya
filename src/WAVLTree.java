@@ -162,6 +162,14 @@ public class WAVLTree {
 		 * Height of node
 		 */
 		private int height;
+		
+		public WAVLNode(int key,String info){
+			this.key=key;
+			this.info=info;
+			this.left=null;
+			this.right=null;
+			this.height=0;
+			
 	}
 }
 
